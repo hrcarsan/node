@@ -16,5 +16,5 @@ RUN apt-get install xz-utils \
 RUN groupadd --gid 1000 node \
     && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-# Using this image you can use the next command to run a script that open a browser for example
+# With this image you can use the next command to run a script that open a browser for example
 #  command: bash -c "Xvfb :99 -screen 0 1024x768x16 -ac -nolisten tcp -nolisten unix & node ./dist/app.js"
