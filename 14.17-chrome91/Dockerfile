@@ -1,6 +1,6 @@
-# docker build -t hrcarsan/node:14.17-xvfb .
+# docker build -t hrcarsan/node:14.17-chrome91 .
 
-FROM hrcarsan/ubuntu:20.04-xvfb
+FROM hrcarsan/ubuntu:20.04-chrome91
 LABEL maintainer="hrcarsan@gmail.com"
 
 RUN apt-get install xz-utils \
@@ -17,5 +17,5 @@ RUN apt-get install xz-utils \
 RUN groupadd --gid 1000 node \
     && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-# With this image you can use the next command to run a script that open a browser for example
+# With this image you can use the next command to run a script that open google-chrome
 #  command: bash -c "Xvfb :99 -screen 0 1024x768x16 -ac -nolisten tcp -nolisten unix & node ./dist/app.js"
